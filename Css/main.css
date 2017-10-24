@@ -1,0 +1,56 @@
+body {
+	font-family: sans-serif;
+}
+
+nav {
+	width: 200px;
+}
+
+ul {
+	/*outline: 1px solid yellow;  me marca los límites de mis cajas*/
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 30px; /*espaciado entre-líneas*/
+}
+
+li {
+	/*outline: 1px solid red;*/
+	background-color: #f5f5f0;
+}
+
+a {
+	/*outline: 1px solid green;*/
+	/*como esta etiqueta es inline, solo ocupa el espacio necesario para
+	albergar sus elementos, por tanto le agregaremos una etiqueta 
+	(display: block)que me lo reconozca como elemento de bloque*/
+	display: block;
+	text-decoration: none; /*para borrar la línea de link*/
+	color: #000;
+	padding-left: 10px; /*espaciado entre elemento y contenido*/
+}
+/*Recordar LoVe/HAte: link, visited, hover, active
+con hover hacemos que al movernos entre bloque cambie de color*/
+a:hover {
+background-color: #e0e0d1;
+}
+
+a:active {
+	background-color: #333;
+	color: #fff;
+}
+
+ul li:first-child { /*rescatamos, un li de la etiqueta ul que es 
+	sólo el primer li, por eso usamos el first-child*/
+	background-color: #f9a91a;
+}
+
+ul li:first-child a:hover { /*rescatamos el primer anchor del primer li de ul*/
+	/*le agregamos el hover para que la letra cambie a negro cuando estoy sobre
+	él.*/
+	color: #000;
+}
+
+ul li:first-child a:active {
+	color: #fff;
+}
